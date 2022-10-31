@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment2</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+           
+        }
+        .container{
+            width:850px;
+            margin:auto;
+           padding:93px;
+        }
+        .item{
+            padding:8px 3px;
+            
+            margin:3px 1px;
+        }
+        #head{
+            width:99%;
+            float: left;
+            background-color: lightskyblue;
+        }
+        #sidebar{
+            width:32%;
+            float:left;
+            background-color: #ACDF87;
+            height:280px;
+        }
+        #mainc{
+            width:67%;
+            float:left;
+            background-color: #FCD12A;
+            height:200px;
+
+        }
+        #extrac{
+            width:67%;
+            float:right;
+            background-color: #9f9f9f;
+            height:74px;
+        }
+        #foot{
+            width:100%;
+            float:left;
+            background-color: darkorange;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="head" class="item"><p>Header</p></div>
+        <div id="sidebar" class="item"><p id="sb">Sidebar</p></div>
+        <div id="mainc" class="item"><p>Main Content</p></div>
+        <div id="extrac" class="item"><p>Extra Content</p></div>
+        <footer id="foot" class="item"><p>Footer</p></footer>
+    </div>
+</body>
+<script>
+    $("#head").click(function(){
+        $("#head").css("background-color","red");
+    });
+    $("#sidebar").click(function()
+    {
+        $("#sb").text("Leftbar");
+    });
+    $("#extrac").click(function()
+    {
+        $("#mainc").css("visibility",'hidden');
+    });
+</script>
+</html>
